@@ -13,8 +13,8 @@
 	{
 	putchar(alphabet);
 
-	if (alphabet == 'd' || alphabet == 'p')
-	alphabet ++;
+	if (alphabet == 'e' || alphabet == 'q')
+	continue;
 	}
 	putchar('\n');
 	return (0);
