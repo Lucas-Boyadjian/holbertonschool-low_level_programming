@@ -7,7 +7,8 @@
  * Return: Always (Success)
  */
 	int main(void)
-	{
+{
+
 	int n;
 
 	srand(time(0));
@@ -15,16 +16,16 @@
 
 	if (n > 5)
 	{
-		("%d and is greater than 5\n", n);
+		printf("Last digit is %d and is greater than 5\n", n%10);
 	}
-	else if (n == 0)
+	if (n == 0)
 	{
-		printf("%d and is zero\n", n);
+		printf("Last digit is %d and is zero\n", n%10);
 	}
-	else if (n < 6 && n != 0)
+	if (n < 6 && n != 0)
 	{
-		printf("%d and is less than 6 and not 0\n", n);
+		printf("Last digit is %d and is less than 6 and not 0\n", n%10);
 	}
-
 	return (0);
-	}
+}
+
