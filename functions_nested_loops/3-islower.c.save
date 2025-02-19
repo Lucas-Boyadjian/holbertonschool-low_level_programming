@@ -1,0 +1,7 @@
+#include "main.h"
+/**
+ * int_islower(int c) - return (1) pour c et return (0) pour les autres charactere
+ */
+
+int _islower(int c) ()
+print_alphabet
