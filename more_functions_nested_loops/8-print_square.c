@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * print_diagonal - Print '\'
- * @n: Print numbers of '\'
+ * print_square - Print a rectangle with #
+ * @size: Size of rectangle
  * Return: Always (Succes)
  */
 
