@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * int_isupper - Value A to Z
+ * _isupper - Value A to Z
  * @c: Character
  * Return: if c is uppercase return 1 and return 0 otherwise
  */
