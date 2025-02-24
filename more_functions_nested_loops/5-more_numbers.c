@@ -2,18 +2,23 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * print_most_numbers - Print numbers 0 to 9 but not 2 and 4
+ * more_numbers - Print numbers 0 to 14
  * Return: Always (Succes)
  */
 
-void print_most_numbers(void)
-
+void more_numbers(void)
 {
-int number;
-	for (number = '0'; number <= 14; number++)
-	_putchar(number);
+int number1;
+int number2;
+
+	for (number1 = 0; number1 < 10; number1++)
+	{
+		for (number2 = 0; number2 <= 14; number2++)
 		{
-		for (number = '0'; number <= 10; number++)
-		_putchar('\n');
+			if (number2 >= 10)
+			_putchar('1');
+			_putchar((number2 % 10) + '0');
 		}
+_putchar('\n');
+	}
 }
