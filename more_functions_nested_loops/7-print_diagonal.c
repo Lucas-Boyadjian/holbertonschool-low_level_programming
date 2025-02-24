@@ -2,24 +2,30 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * print_numbers - Print numbers 0 to 9
+ * print_diagonal - Print '\'
+ * @n: Print numbers of '\'
  * Return: Always (Succes)
  */
 
 void print_diagonal(int n)
-{
-int num;
 
-if (n <= 0)
 {
-_putchar('\n');
-return;
-}
-while (n > 0)
-{
-_putchar('_');
-                n--;
-                }
-_putchar('\n');
-}
+int a = 0;
+int b;
 
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+			while (a < n)
+			{
+					for (b = 0; b < a; b++)
+					{
+						_putchar(' ');
+					}
+				_putchar(92);
+				_putchar('\n');
+				a++;
+
+			}
+}
