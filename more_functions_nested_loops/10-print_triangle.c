@@ -19,8 +19,6 @@ _putchar('\n');
 }
 	for (ligne = 0; ligne < size; ligne++)
 	{
-	_putchar('\n');
-
 		for (espace = 0; espace < size - ligne - 1; espace++)
 			{
 			_putchar(' ');
@@ -29,5 +27,6 @@ _putchar('\n');
 			{
 			_putchar('#');
 			}
+	_putchar('\n');
 	}
 }
