@@ -2,30 +2,32 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * print_diagonal - Print '\'
- * @n: Print numbers of '\'
- * Return: Always (Succes)
+ * print_triangle - print a triangle with 3 variables
+ * @size: Size of the triangle
+ * Return: Always (Success)
  */
-void print_diagonal(int n)
+void print_triangle(int size)
 
 {
-int a;
-int b;
-int c;
-        if (size <= 0)
-        {
-        _putchar('\n');
-        }
-a = 0;
-	for (a = 0; a < size; a++)
-	for (c = 0; < size; c--)
+int ligne;
+int espace;
+int dieze;
+
+if (size <= 0)
 {
-_putchar('#');
+_putchar('\n');
 }
-for (b = 0; b < size; b++)
-{
-_putchar(' ');
-}
-					}
+	for (ligne = 0; ligne < size; ligne++)
+	{
+	_putchar('\n');
+
+		for (espace = 0; espace < size - ligne - 1; espace++)
+			{
+			_putchar(' ');
+			}
+		for (dieze = 0; dieze < ligne + 1; dieze++)
+			{
+			_putchar('#');
+			}
 	}
 }
