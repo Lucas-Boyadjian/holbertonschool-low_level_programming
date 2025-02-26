@@ -3,15 +3,18 @@
 #include "main.h"
 
 /**
-* _strlen - function tant returns the length of a string
-* 
-*
+* _strlen - returns the length of a string.
+* @s: pointer to the string to calculate the length.
+* Return: length of the string as an integer.
 */
-
 
 int _strlen(char *s)
 {
-int count = 0;
+int compteur = 0;
 
-for (; ; *s != '\0'; count++)
-
+	while (s[compteur] != '\0')
+	{
+		compteur++;
+	}
+return (compteur);
+}
