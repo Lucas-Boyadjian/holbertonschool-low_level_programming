@@ -15,10 +15,9 @@ int start = 0;
 int end = 0;
 
 	while (s[end] != '\0')
-	{
 		end++;
-		end--;
-	}
+	end--;
+
 	while (start < end)
 	{
 	tmp = s[start];
