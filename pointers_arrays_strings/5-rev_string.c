@@ -18,8 +18,8 @@ if (s == NULL)
 return;
 	while (s[end] != '\0')
 	{
-	end++;
-	end--;
+		end++;
+		end--;
 	}
 
 	while (start < end)
