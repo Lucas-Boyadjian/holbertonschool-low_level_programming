@@ -24,6 +24,5 @@ n = (length + 1) / 2;
 	{
 	_putchar(str[i]);
 	}
-
 _putchar('\n');
 }
