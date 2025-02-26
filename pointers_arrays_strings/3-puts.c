@@ -9,10 +9,17 @@
 */
 
 void _puts(char *str)
+
 {
-	while (*str != '\0')
+int compteur = 0;
+
+if (str == NULL)
+return;
+
+	while (str[compteur] != '\0')
 	{
-	_putchar(*str);
-	str++;
-	}
+	_putchar(str[compteur]);
+	compteur++;
+		}
+_putchar('\n');
 }
