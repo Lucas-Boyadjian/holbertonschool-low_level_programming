@@ -3,23 +3,25 @@
 #include "main.h"
 
 /**
-* print_array - prints n elements of an array of integers
-* @n: is the number of elements of the array to be printed
-* @a: is the string
-*/
+ * _strcpy - Copies the string pointed to by src to dest.
+ *
+ * @src: The source string to be copied.
+ * @dest: The buffer where the string will be copied.
+ * Return: A pointer to the destination string (dest).
+ */
 
 char *_strcpy(char *dest, char *src)
-
 {
-int i;
 
-	for (i = 0; i < n; i++)
+int length = 0;
+
+	while (src[length] != '\0')
 	{
-		if (i != n - 1)
-		printf("%d, ", a[i]);
-			else
-			printf("%d", a[i]);
+	dest[length] = src[length];
+	length++;
+		}
 
-	}
-	printf("\n");
+dest[length] = '\0';
+
+return (dest);
 }
