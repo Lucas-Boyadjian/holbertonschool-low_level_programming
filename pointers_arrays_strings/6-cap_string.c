@@ -15,8 +15,8 @@ int i = 0;
 int j;
 int length = strlen(str);
 
-char arr[] = {',', ';', '.', '!', '?', '"',
-'(', ')', '{', '}', ' ', \t, \n};
+char arr[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"',
+'(', ')', '{', '}'};
 
 int arr_size = sizeof(arr) / sizeof(arr[0]);
 
