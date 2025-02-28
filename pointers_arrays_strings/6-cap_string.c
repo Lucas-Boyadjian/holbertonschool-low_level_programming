@@ -27,7 +27,7 @@ str[0] = str[0] - 32;
 	while (str[i] != '\0')
 	{
 		for (j = 0; j < arr_size; j++)
-   		{
+		{
 			if (str[i] == arr[j])
 			{
 				if (i + 1 < length && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
@@ -39,5 +39,5 @@ str[0] = str[0] - 32;
 		}
 	i++;
 	}
-	return (str);
+return (str);
 }
