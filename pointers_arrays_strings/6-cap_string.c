@@ -12,31 +12,32 @@ char *cap_string(char *str)
 
 {
 int i = 0;
-int j;
-int length = strlen(str);
+size_t j;
+int cap = 1;
+char arr[14] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}',
+' ', '\n', '\t'};
 
-char arr[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"',
-'(', ')', '{', '}'};
-
-int arr_size = sizeof(arr) / sizeof(arr[0]);
-
-if (str[0] >= 'a' && str[0] <= 'z')
-{
-str[0] -= 32;
-}
 	while (str[i] != '\0')
 	{
-		for (j = 0; j < arr_size; j++)
+		for (j = 0; j < sizeof(arr) / sizeof(arr[0]); j++)
 		{
-			if (str[i] == arr[j])
+		if (str[i] == arr[j])
 			{
-				if (i + 1 < length && (str[i + 1] >= 'a' && str[i + 1] <= 'z'))
-				{
-				str[i + 1] -= 32;
-				}
+			cap = 1;
 			break;
 			}
 		}
+		if (cap == 1 && str[i] >= 'a' && str[i] <= 'z')
+			{
+			str[i] = str[i] - 32;
+			cap = 0;
+			}
+		else if ((str[i] >= 'A' && str[i] <= 'Z') ||
+		(str[i] >= '0' && str[i] <= '9'))
+			{
+			cap = 0;
+			}
 	i++;
 	}
+return (str);
 }
