@@ -16,7 +16,7 @@ int j;
 int length = strlen(str);
 
 char arr[] = {',', ';', '.', '!', '?', '"',
-'(', ')', '{', '}', ' ', '\t', '\n'};
+'(', ')', '{', '}', ' ', \t, \n};
 
 int arr_size = sizeof(arr) / sizeof(arr[0]);
 
