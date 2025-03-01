@@ -26,6 +26,12 @@ while (s[i] != '\0')
 		continue;
 		}
 
+	if (s[i] >= 65 && s[i] <= 122)
+		{
+		i++;
+		continue;
+		}
+
 	if (s[i] == '+' || s[i] == '-')
 		{
 		if (s[i] == '-')
@@ -49,6 +55,5 @@ while (s[i] != '\0')
 	i++;
 	}
 return (result * sign);
+
 }
-
-
