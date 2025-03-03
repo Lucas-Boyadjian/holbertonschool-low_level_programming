@@ -3,28 +3,32 @@
 #include <stdio.h>
 
 /**
-* main - check the code
-*
-* Return: Always 0.
+* _strstr - 
+* @haystack :
+* @needle :
+* Return: Return (haystack + a) or (NULL)
 */
 
 char *_strstr(char *haystack, char *needle)
 
 {
-    int a = 0;
-    int b;
-    
-    while (haystack[a] != '\0')
+
+int a = 0;
+int b = 0;
+
+while (haystack[a] != '\0')
     {
-        while (accept[b] != '\0')
-        {   
+    b = 0;
         if (haystack[a] == needle[b])
-            return (haystack(a));
-            b++;
-        }
-     a++;
+            {
+                while (needle[b] != haystack[a])
+                    {
+                        if (haystack[a] == needle[b])
+                        b++;
+                    }
+            return (haystack + a);
+            }
+    a++;
     }
-return (NULL);
+return (NULL);    
 }
-
-
