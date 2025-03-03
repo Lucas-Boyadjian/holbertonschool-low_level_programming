@@ -3,9 +3,10 @@
 #include <stdio.h>
 
 /**
-* main - check the code
-*
-* Return: Always 0.
+* _strspn - function that gets the length of a prefix substring
+* @s : "hello, world"
+* @accept : "oleh"
+* Return: Return (c)
 */
 
 unsigned int _strspn(char *s, char *accept)
@@ -17,15 +18,14 @@ int c = 0;
 
 while (s[a] != '\0')
 {
-	b = 0;
-
+b = 0;
 	while (accept[b] != '\0')
 	{
 		if (s[a] == accept[b])
-			{
-				c++;
-				break;
-			}
+		{
+		c++;
+		break;
+		}
 	b++;
 	}
 if (accept[b] == '\0')
