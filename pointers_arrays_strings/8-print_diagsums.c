@@ -6,7 +6,7 @@
 * print_diagsums - function that prints the sum of the two diagonals
 * @a : pointer of the array
 * @size : Size of matrice
-* Return: Always (Success)
+* Return: Always (Successl)
 */
 
 void print_diagsums(int *a, int size)

@@ -21,7 +21,7 @@ while (haystack[a] != '\0')
 b = 0;
 	if (haystack[a] == needle[b])
 	{
-		while (needle[b] != haystack[a])
+		while (needle[b] != haystack[a + b])
 		{
 			if (haystack[a] == needle[b])
 			b++;
