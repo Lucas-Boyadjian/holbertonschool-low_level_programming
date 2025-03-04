@@ -24,14 +24,17 @@ while (haystack[a] != '\0')
 b = 0;
 	if (haystack[a] == needle[b])
 	{
-		while (needle[b] != haystack[a + b])
+		while (needle[b] != '\0' && haystack[a + b]
+			!= '\0' && needle[b] == haystack[a + b])
 		{
-			if (haystack[a + b] != needle[b])
-			break;
+			b++;
 		}
-	return (haystack + a);
+		if (needle[b] == '\0')
+		{
+			return (haystack + a);
+		}
+	a++;
 	}
-a++;
-}
 return (NULL);
+}
 }
