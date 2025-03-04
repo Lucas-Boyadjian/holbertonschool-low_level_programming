@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * _puts_recursion - function that prints a string, followed by a new line.
+ * _print_rev_recursion - function that prints a string in reverse
  * @s : String
  * Return: A pointer to the destination string (dest).
  */
 
-void _puts_recursion(char *s)
+void _print_rev_recursion(char *s)
 
 {
 
@@ -15,10 +15,9 @@ int i = 0;
 
 if (*s == '\0')
 	{
-	_putchar('\n');
 	return;
 	}
+_print_rev_recursion(s + 1);
 _putchar(s[i]);
-_puts_recursion(s + 1);
 
 }
