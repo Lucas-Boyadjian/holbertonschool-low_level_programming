@@ -4,7 +4,7 @@
 /**
 * main - program that prints all arguments it receives
 * @argc : Count tab
-* @argv : Values of tab:
+* @argv : Values of tab
 * Return: Always (Success)
 */
 

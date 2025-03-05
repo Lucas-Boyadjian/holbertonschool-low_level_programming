@@ -3,8 +3,8 @@
 #include <ctype.h>
 /**
  * main - program that prints all arguments it receives
- * @argc :
- * @argv :
+ * @argc : Count tab
+ * @argv : Values of tab
  * Return: Always (Success)
  */
 
@@ -16,17 +16,17 @@ int a;
 int b;
 int result = 0;
 
-if (argc <= 1)
+	if (argc <= 1)
 	{
 		printf("0\n");
 			return (0);
 	}
 
-if (argc > 1)
-{
-	for (a = 1; a < argc; a++)
+	if (argc > 1)
 	{
-		for (b = 0; argv[a][b] != '\0'; b++)
+		for (a = 1; a < argc; a++)
+		{
+			for (b = 0; argv[a][b] != '\0'; b++)
 			{
 				if (!isdigit(argv[a][b]))
 				{
