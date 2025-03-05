@@ -3,15 +3,15 @@
 
 /**
  * main - Program that prints its name, followed by a new line
- * @argc :
- * @argv :
- * Return: Always (Success)
+ * @argc : Count tab
+ * @argv : Values of tab
+ * Return: Return 0
  */
 
 int main(int argc, char *argv[])
 
 {
 (void)argc;
-    printf("%s\n", argv[0]);
-return (0);
+	printf("%s\n", argv[0]);
+		return (0);
 }
