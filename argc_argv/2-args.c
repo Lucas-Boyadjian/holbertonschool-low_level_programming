@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * main - program that prints all arguments it receives
- * @argc :
- * @argv :
- * Return: Always (Success)
- */
+* main - program that prints all arguments it receives
+* @argc : Count tab
+* @argv : Values of tab:
+* Return: Always (Success)
+*/
 
 int main(int argc, char *argv[])
 
