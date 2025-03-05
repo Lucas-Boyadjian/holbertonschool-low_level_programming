@@ -8,33 +8,41 @@
  * Return: Always (Success)
  */
 
-int main(int argc, char *argv[0])
+int main(int argc, char *argv[])
 
 {
 int num;
 int a;
 int b;
-int result;
+int result = 0;
 
-	if (argc == 1)
+if (argc <= 1)
 	{
 		printf("0\n");
 			return (0);
 	}
-for (a = 0; a < argc; a++)
+
+if (argc < 1)
+{
+	for (a = 1; a < argc; a++)
 	{
-		for (b = 0; argv[a][b] != '\n0'; j++)
+		for (b = 0; argv[a][b] != '\0'; b++)
 			{
-				if (!isdigit(arg[a][b]))
+				if (!isdigit(argv[a][b]))
 				{
 					printf("Error\n");
-					return (1);
+						return (1);
 				}
 			}
-a = atoi(argv[1]);
-b = atoi(argv[2]);
 
-result = a *b;
+num = atoi(argv[a]);
+result += num;
+
+	}
+
 printf("%d\n", result);
-			return (0);
+
+}
+
+return (0);
 }
