@@ -22,7 +22,7 @@ if (argc <= 1)
 			return (0);
 	}
 
-if (argc < 1)
+if (argc > 1)
 {
 	for (a = 1; a < argc; a++)
 	{
