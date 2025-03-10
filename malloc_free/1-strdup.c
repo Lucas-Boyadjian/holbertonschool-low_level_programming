@@ -36,7 +36,5 @@ if (str_copy == NULL)
 	{
 		str_copy[i] = str[i];
 	}
-str_copy[size] = '\0';
-
 return (str_copy);
 }

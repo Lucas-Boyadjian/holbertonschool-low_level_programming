@@ -16,14 +16,14 @@ unsigned int i;
 char *array;
 array = malloc(size * sizeof(char));
 
-	if (array != NULL)
-	{
-		for (i = 0; i < size; i++)
-			{
-			array[i] = c;
-			}
+if (array != NULL)
+{
+	for (i = 0; i < size; i++)
+		{
+		array[i] = c;
+		}
 	}
-else
+if (array == NULL)
 	{
 	return (NULL);
 	}
