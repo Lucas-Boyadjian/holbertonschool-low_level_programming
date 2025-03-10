@@ -3,43 +3,21 @@
 #include <stdlib.h>
 
 /**
-* **alloc_grid - Function that returns a pointer to a array of integers
-* @width : Largeur
+* free_grid - Function that frees a 2 dimensional grid
+* @grid : Variable represent a array of 2 dimensions
 * @height : Hauteur
-* Return: return (full_str)
+* Return: free(grid)
 */
 
-int **alloc_grid(int width, int height)
+void free_grid(int **grid, int height)
 
 {
+
 int i;
-int j;
-int **array;
 
-if (width <= 0 || height <= 0)
-	return (NULL);
-
-array = malloc(height * sizeof(int *));
-
-if (array == NULL)
-	return (NULL);
-
-for (i = 0; i < height; i++)
-{
-	array[i] = malloc(width * sizeof(int));
-		if (array[i] == NULL)
-		{
-			for (j = 0; j < i; j++)
-			{
-				free(array[j]);
-			}
-		free(array);
-		return (NULL);
-		}
-			for (j = 0; j < width; j++)
-			{
-				array[i][j] = 0;
-			}
-}
-return (array);
+	for (i = 0; i < height; i++)
+	{
+		free(grid[i]);
+	}
+free(grid);
 }
