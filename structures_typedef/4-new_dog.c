@@ -4,14 +4,14 @@
  #include "dog.h"
  /**
  * *new_dog - Creates a new dog
- * @name: Name of the dog
- * @age: Age of the dog
- * @owner: Owner of the dog
+ * @name: char name
+ * @age: float age
+ * @owner: char owner
  * Return : return (new_dog_ptr) or NULL if it's fail
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-int name_length = 0, int owner_length = 0, int i, int j;
+int name_length = 0, int owner_length = 0, int i  = 0, int j = 0;
 dog_t *new_dog_ptr;
 if (name == NULL || owner == NULL)
 return (NULL);
