@@ -16,14 +16,14 @@ int end = 0;
 
 	while (s[end] != '\0')
 		end++;
-	end--;
+		end--;
 
 	while (start < end)
 	{
-	tmp = s[start];
-	s[start] = s[end];
-	s[end] = tmp;
-	start++;
-	end--;
+		tmp = s[start];
+		s[start] = s[end];
+		s[end] = tmp;
+		start++;
+		end--;
 	}
 }

@@ -17,14 +17,14 @@ int start = 0;
 int end = n - 1;
 int tmp;
 
-while (start < end)
-{
-tmp = a[start];
-a[start] = a[end];
-a[end] = tmp;
+	while (start < end)
+	{
+		tmp = a[start];
+		a[start] = a[end];
+		a[end] = tmp;
 
-start++;
-end--;
+		start++;
+		end--;
 
-}
+	}
 }
