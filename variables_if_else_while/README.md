@@ -1,56 +1,79 @@
-C - Recursion
-In this project, I learned about recursion in C.
+# C - Variables, if, else, while
 
-Tests ✔️
-tests: Folder of test files. Provided by Holberton School.
-Helper File 🙌
-_putchar.c: C function that writes a character to stdout.
-Header File 📁
-holberton.h: Header file containing prototypes for all functions written in the project.
-File	Prototype
-0-puts_recursion.c	void _puts_recursion(char *s);
-1-print_rev_recursion.c	void _print_rev_recursion(char *s);
-2-strlen_recursion.c	int _strlen_recursion(char *s);
-3-factorial.c	int factorial(int n);
-4-pow_recursion.c	int _pow_recursion(int x, int y);
-5-sqrt_recursion.c	int _sqrt_recursion(int n);
-6-is_prime_number.c	int is_prime_number(int n);
-7-is_palindrome.c	int is_palindrome(char *s);
-100-wildcmp.c	int wildcmp(char *s1, char *s2);
-Tasks 📃
-0. She locked away a secret, deep inside herself, something she once knew to be true... but chose to forget
+This project focuses on basic C programming concepts including variables, conditional statements, and loops.
 
-0-puts_recursion.c: C function that prints a string, followed by a new line.
-1. Why is it so important to dream? Because, in my dreams we are together
+## Description
 
-1-print_rev_recursion.c: C function that prints a string in reverse.
-2. Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange
+This project introduces fundamental programming concepts in C, such as variable declaration and initialization, conditional statements (if, else), logical operators, and loop constructs (while). It also covers basic arithmetic operators, relational operators, and ASCII character representation.
 
-2-strlen_recursion.c: C function that returns the length of a string.
-3. You mustn't be afraid to dream a little bigger, darling
+## Learning Objectives
 
-3-factorial.c: C function that returns the factorial of a given number.
-4. Once an idea has taken hold of the brain it's almost impossible to eradicate
+- Understanding arithmetic operators and how to use them
+- Logical operators (boolean operators) and their usage
+- Relational operators and how they work in conditional statements
+- What values are considered TRUE and FALSE in C
+- How to use if, if...else statements
+- How to declare variables of different types
+- How to use the while loop
+- How to print variables using printf and putchar
+- ASCII character set understanding
+- The gcc flags `-m32` and `-m64`
 
-4-pow_recursion.c: C function that returns the value of a number x raised to the value of an input y.
-If y is less than 0, the function returns -1.
-5. Your subconscious is looking for the dreamer
+## Tasks
 
-5-sqrt_recursion.c: C function that returns the natural square root of a number.
-If the number does not have a natural square root, the function returns -1.
-6. Inception. Is it possible?
+1. **0-positive_or_negative.c** - Program that determines if a random number is positive, negative, or zero
+2. **1-last_digit.c** - Program that prints the last digit of a random number
+3. **2-print_alphabet.c** - Program that prints the alphabet in lowercase
+4. **3-print_alphabets.c** - Program that prints the alphabet in lowercase, then in uppercase
+5. **4-print_alphabt.c** - Program that prints the alphabet in lowercase except 'q' and 'e'
+6. **5-print_numbers.c** - Program that prints all single digit numbers of base 10
+7. **6-print_numberz.c** - Program that prints all single digit numbers of base 10 using putchar
+8. **7-print_tebahpla.c** - Program that prints the lowercase alphabet in reverse
+9. **8-print_base16.c** - Program that prints all the numbers of base 16 in lowercase
+10. **9-print_comb.c** - Program that prints all possible combinations of single-digit numbers
+11. **100-print_comb3.c** - Program that prints all possible different combinations of two digits
+12. **101-print_comb4.c** - Program that prints all possible different combinations of three digits
 
-6-is_prime_number.c: C function that checks in an integer is a prime number.
-If the integer is prime, the function returns 1.
-Otherwise, the function returns 0.
-7. They say we only use a fraction of our brain's true potential. Now that's when we're awake. When we're asleep, we can do almost anything
+## Requirements
 
-7-is_palindrome.c: C function that checks if a string is a palindrome.
-If the string is a palindrome, the function returns 1.
-Otherwise, the function returns 0.
-8. Inception. Now, before you bother telling me it's impossible...
+- All files will be compiled on Ubuntu 20.04 LTS using `gcc` with the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- Code must follow the Betty style
+- No global variables allowed
+- No more than 5 functions per file
+- No standard library functions allowed except those specified (printf, putchar)
+- The use of functions like printf and puts is typically restricted to specific tasks
+- All code should be in the main function
 
-100-wildcmp.c: C function that compares two strings s1 and s2.
-s2 can contain the special character *.
-If the strings can be considered identical, the function returns 1.
-Otherwise, the function returns 0.
+## Example
+
+```c
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    int n;
+
+    srand(time(0));
+    n = rand() - RAND_MAX / 2;
+    
+    if (n > 0)
+        printf("%d is positive\n", n);
+    else if (n == 0)
+        printf("%d is zero\n", n);
+    else
+        printf("%d is negative\n", n);
+    
+    return (0);
+}
+```
+
+## Note
+
+Understanding variables, control flow with conditionals, and loops are fundamental concepts in programming. Mastering these basics is essential before moving on to more complex topics like functions, pointers, and data structures.

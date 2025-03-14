@@ -1,66 +1,48 @@
-C - More functions, more nested loops
-In this project, I continued to learn about using nested loops and writing functions in C.
+# C - More Functions, More Nested Loops
 
-Tests ✔️
-tests: Folder of test files. Provided by Holberton School.
-Helper File 🙌
-_putchar.c: C function that writes a character to stdout.
-Header File 📁
-holberton.h: Header file containing prototypes for all functions written in the project.
-File	Prototype
-0-isupper.c	int _isupper(int c);
-1-isdigit.c	int _isdigit(int c);
-2-mul.c	int mul(int a, int b);
-3-print_numbers.c	void print_numbers(void);
-4-print_most_numbers.c	void print_most_numbers(void);
-5-more_numbers.c	void more_numbers(void);
-6-print_line.c	void print_line(int n);
-7-print_diagonal.c	void print_diagonal(int n);
-8-print_square.c	void print_square(int size);
-10-print_triangle.c	void print_triangle(int size);
-101-print_number.c	void print_number(int n);
-Tasks 📃
-0. isupper
+This project builds upon the previous functions and nested loops project, introducing more complex function implementations and additional nested loop exercises.
 
-0-isupper.c: C function that checks for uppercase characters. Returns 1 if the character is uppercase, 0 otherwise.
-1. isdigit
+## Description
 
-1-isdigit.c: C function that checks for a digit (0 through 9). Returns 1 if the character is a digit, 0 otherwise.
-2. Collaboration is multiplication
+This project expands on function usage and nested loops in C programming. It focuses on creating functions for various character checks, arithmetic operations, and pattern printing using nested loops.
 
-2-mul.c: C function that multiplies two integers. Returns the value of the multiplication.
-3. The numbers speak for themselves
+## Learning Objectives
 
-3-print_numbers.c: C function that prints the numbers 0 to 9, followed by a new line.
-4. I believe in numbers and signs
+- How to use nested loops to solve more complex problems
+- Creating functions with specific purposes and return types
+- Understanding function prototypes and their importance
+- Working with scope rules in C
+- Using header files to organize function declarations
+- Implementing functions that process characters and integers
+- Understanding compiler flags and coding standards
 
-4-print_most_numbers: C function that prints the numbers 0 to 9 except for 2 and 4, followed by a new line.
-5. Numbers constitute the only universal language
+## Tasks
 
-5-more_numbers.c: C function that prints the numbers 0 to 14, followed by a new line, ten times.
-6. The shortest distance between two points is a straight line
+1. **0-isupper.c** - Function that checks for uppercase character
+2. **1-isdigit.c** - Function that checks for a digit (0 through 9)
+3. **2-mul.c** - Function that multiplies two integers
+4. **3-print_numbers.c** - Function that prints the numbers from 0 to 9
+5. **4-print_most_numbers.c** - Function that prints numbers from 0 to 9 (excluding 2 and 4)
+6. **5-more_numbers.c** - Function that prints 10 times the numbers from 0 to 14
+7. **6-print_line.c** - Function that draws a straight line in the terminal
+8. **7-print_diagonal.c** - Function that draws a diagonal line in the terminal
+9. **8-print_square.c** - Function that prints a square using the # character
+10. **9-fizz_buzz.c** - Program that prints numbers from 1 to 100 with Fizz-Buzz substitutions
+11. **10-print_triangle.c** - Function that prints a triangle using the # character
 
-6-print_line.c: C function that draws a straight line in the terminal using the character _, followed by a new line.
-If the function receives length input of zero or less, only a new line is printed.
-7. I feel like I am diagonally parked in a parallel universe
+## Requirements
 
-7-print_diagonal.c: C function that draws a diagonal line in the terminal using the \ character, followed by a new line.
-If the function receives length input of zero or less, only a new line is printed.
-8. You are so much sunshine in every square inch
+- All files will be compiled on Ubuntu 20.04 LTS using `gcc` with the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- Code must follow the Betty style
+- No global variables allowed
+- Maximum of 5 functions per file
+- No standard library functions allowed except _putchar
+- Prototypes of all functions and the prototype of _putchar should be included in a header file called `main.h`
 
-8-print_square.c: C function that prints a square using the # character, followed by a new line.
-If the function receives size input of zero or less, only a new line is printed.
-9. Fizz-Buzz
+## Custom _putchar Function
 
-9-fizz_buzz.c: C program that prints the numbers from 1 to 100, but for multiples of three, Fizz is printed instead of the number, for multiples of five, Buzz, and for multiples of both three and five, FizzBuzz.
-Each number or word is separated by a space.
-10. Triangles
+For this project, we are using a custom `_putchar` function to print characters. This function is similar to the standard library's putchar but is implemented for educational purposes.
 
-10-print_triangle.c: C function that prints a triangle using the # character, followed by a new line.
-If the function receives size input of zero or less, only a new line is printed.
-11. The problem of distinguishing prime numbers from composite numbers and of resolving the latter into their prime factors is known to be one of the most important and useful in arithmetic
+## Note
 
-100-prime_factor.c: C program that prints the largest prime factor of the number 612852475143, followed by a new line.
-12. Numbers have life; they're not just symbols on paper
-
-101-print_number.c: C function that prints an integer without using long, arrays, pointers, or hard-coded special values.
+This project reinforces the understanding of functions and nested loops in C programming while introducing more complex patterns and operations. Mastering these concepts is essential for building efficient and well-structured C programs.

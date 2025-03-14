@@ -1,34 +1,68 @@
-C - Hello, World
-In this project, I learned about compilation using gcc, entry points using main, and text-printing functions in C.
+# C - Hello, World
 
-Tasks 📃
-0. Preprocessor
+This project serves as an introduction to the C programming language, covering the basics of compilation and the first steps in C programming.
 
-0-preprocessor: Bash script that runs a C file saved in the variable $CFILE through the preprocessor and saves the result in the file c.
-1. Compiler
+## Description
 
-1-compiler: Bash script that compiles a C file saved in the variable $CFILE that does not link; saves the result in an output file of the same name but with a .o extension.
-Example: If the C file is main.c, the output is main.o.
-2. Assembler
+This project introduces the fundamentals of C programming, including the compilation process, basic syntax, and standard input/output operations. It covers the necessary steps to compile and execute C programs using gcc, as well as writing basic programs in C.
 
-2-assembler: Bash script that generates the assembly code of a C code saved in the variable $CFILE; saves the result in an output file of the same name but with a .s extension.
-Example: If the C file is main.c, the result is main.s.
-3. Name
+## Learning Objectives
 
-3-name: Bash Script that compiles a C file saved in the variable $CFILE and creates an executable cisfun.
-4. Hello, puts
+- Understanding the compilation process in C
+- Learning about the main function and its role in C programs
+- How to print text using printf, puts, and putchar functions
+- How to get the size of a specific type using the sizeof operator
+- Understanding the gcc compiler and its basic flags
+- Following the official C coding style using Betty
 
-4-puts.c: C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line, using the function puts.
-5. Hello, printf
+## Tasks
 
-5-printf.c: C program that prints exactly with proper grammer, but the outcome is a piece of art,, followed by a new line, using the function printf.
-6. Size is not grandeur, and territory does not make a nation
+1. **0-preprocessor** - Script that runs a C file through the preprocessor and saves the result into another file
+2. **1-compiler** - Script that compiles a C file but does not link
+3. **2-assembler** - Script that generates the assembly code of a C program
+4. **3-name** - Script that compiles a C file and creates an executable named cisfun
+5. **4-puts.c** - C program that prints a specific message using the puts function
+6. **5-printf.c** - C program that prints a message using the printf function
+7. **6-size.c** - C program that prints the size of various data types
 
-6-size.c: C program that prints the size of various types on the computer it is compiled and run on.
-7. Intel
+## Requirements
 
-100-intel: Script that generates the assembly code in Intel syntax of a C file saved in the variable $CFILE; saves the result in an output file of the same name but with a .s extension.
-Example: If the C file is main.c, the output is main.s.
-8. UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity
+- All scripts and programs will be tested on Ubuntu 20.04 LTS
+- All scripts should be exactly two lines long
+- All C files should follow the Betty style
+- C programs should be compiled using gcc with the options: `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- No errors or warnings during compilation
 
-101-quote.c: C program that prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error, without using any functions listed in the NAME sesction of the man(3) printf or man(3) puts.
+## Compilation Examples
+
+```bash
+# For preprocessor script
+$ ./0-preprocessor
+
+# For compiler script without linking
+$ ./1-compiler
+
+# For assembly generation script
+$ ./2-assembler
+
+# For executable creation script
+$ ./3-name
+
+# For C programs
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-puts.c && ./a.out
+"Programming is like building a multilingual puzzle
+
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-printf.c && ./a.out
+with proper grammar, but the outcome is a piece of art,
+
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 6-size.c && ./a.out
+Size of a char: 1 byte(s)
+Size of an int: 4 byte(s)
+Size of a long int: 4 byte(s)
+Size of a long long int: 8 byte(s)
+Size of a float: 4 byte(s)
+```
+
+## Note
+
+This project represents the first step in learning C programming. Understanding these basic concepts will form the foundation for more complex topics in future projects.

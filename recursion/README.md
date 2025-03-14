@@ -1,56 +1,70 @@
-C - Recursion
-In this project, I learned about recursion in C.
+# C - Recursion
 
-Tests ✔️
-tests: Folder of test files. Provided by Holberton School.
-Helper File 🙌
-_putchar.c: C function that writes a character to stdout.
-Header File 📁
-holberton.h: Header file containing prototypes for all functions written in the project.
-File	Prototype
-0-puts_recursion.c	void _puts_recursion(char *s);
-1-print_rev_recursion.c	void _print_rev_recursion(char *s);
-2-strlen_recursion.c	int _strlen_recursion(char *s);
-3-factorial.c	int factorial(int n);
-4-pow_recursion.c	int _pow_recursion(int x, int y);
-5-sqrt_recursion.c	int _sqrt_recursion(int n);
-6-is_prime_number.c	int is_prime_number(int n);
-7-is_palindrome.c	int is_palindrome(char *s);
-100-wildcmp.c	int wildcmp(char *s1, char *s2);
-Tasks 📃
-0. She locked away a secret, deep inside herself, something she once knew to be true... but chose to forget
+This project focuses on understanding and implementing recursive functions in C programming.
 
-0-puts_recursion.c: C function that prints a string, followed by a new line.
-1. Why is it so important to dream? Because, in my dreams we are together
+## Description
 
-1-print_rev_recursion.c: C function that prints a string in reverse.
-2. Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange
+Recursion is a programming technique where a function calls itself in order to solve a problem. This project explores the concept of recursion and its applications in C programming through various exercises that demonstrate recursive problem-solving approaches.
 
-2-strlen_recursion.c: C function that returns the length of a string.
-3. You mustn't be afraid to dream a little bigger, darling
+## Learning Objectives
 
-3-factorial.c: C function that returns the factorial of a given number.
-4. Once an idea has taken hold of the brain it's almost impossible to eradicate
+- Understanding what recursion is and how it works
+- How to implement recursive functions
+- When to use recursion and when not to use it
+- Recognizing problems that can be solved recursively
+- Understanding the memory implications of recursive functions
+- How recursion affects the call stack
 
-4-pow_recursion.c: C function that returns the value of a number x raised to the value of an input y.
-If y is less than 0, the function returns -1.
-5. Your subconscious is looking for the dreamer
+## Tasks
 
-5-sqrt_recursion.c: C function that returns the natural square root of a number.
-If the number does not have a natural square root, the function returns -1.
-6. Inception. Is it possible?
+1. **0-puts_recursion.c** - Function that prints a string using recursion
+2. **1-print_rev_recursion.c** - Function that prints a string in reverse using recursion
+3. **2-strlen_recursion.c** - Function that returns the length of a string using recursion
+4. **3-factorial.c** - Function that returns the factorial of a given number
+5. **4-pow_recursion.c** - Function that returns the value of x raised to the power of y
+6. **5-sqrt_recursion.c** - Function that returns the natural square root of a number
+7. **6-is_prime_number.c** - Function that determines if a number is prime
+8. **100-is_palindrome.c** - Function that checks if a string is a palindrome
+9. **101-wildcmp.c** - Function that compares two strings with wildcard support
 
-6-is_prime_number.c: C function that checks in an integer is a prime number.
-If the integer is prime, the function returns 1.
-Otherwise, the function returns 0.
-7. They say we only use a fraction of our brain's true potential. Now that's when we're awake. When we're asleep, we can do almost anything
+## Requirements
 
-7-is_palindrome.c: C function that checks if a string is a palindrome.
-If the string is a palindrome, the function returns 1.
-Otherwise, the function returns 0.
-8. Inception. Now, before you bother telling me it's impossible...
+- All files will be compiled on Ubuntu 20.04 LTS using `gcc` with the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- Code must follow the Betty style
+- No global variables allowed
+- Maximum of 5 functions per file
+- No standard library functions allowed except _putchar
+- Prototypes of all functions should be included in a header file called `main.h`
+- Not allowed to use any kind of loops
+- Not allowed to use static variables
 
-100-wildcmp.c: C function that compares two strings s1 and s2.
-s2 can contain the special character *.
-If the strings can be considered identical, the function returns 1.
-Otherwise, the function returns 0.
+## Recursive vs Iterative Approaches
+
+While many problems can be solved using either recursive or iterative approaches, recursion often provides a more elegant solution for certain types of problems, especially those that can be broken down into smaller, similar subproblems.
+
+Key differences:
+- Recursive solutions may be more intuitive for certain problems
+- Iterative solutions often have better performance due to less overhead
+- Recursive solutions can lead to stack overflow if not properly designed
+
+## Example
+
+```c
+/**
+ * factorial - Returns the factorial of a given number
+ * @n: The number to calculate factorial of
+ * Return: Factorial of n, or -1 if n is negative
+ */
+int factorial(int n)
+{
+    if (n < 0)
+        return (-1);
+    if (n == 0)
+        return (1);
+    return (n * factorial(n - 1));
+}
+```
+
+## Note
+
+Understanding recursion is a fundamental skill in computer science and programming. While recursive solutions may not always be the most efficient, they often provide elegant solutions to complex problems and are essential for algorithms like tree traversal, backtracking, and divide-and-conquer approaches.

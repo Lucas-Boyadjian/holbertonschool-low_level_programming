@@ -1,34 +1,62 @@
-C - argc, argv
-In this project, I learned about utilizing arguments passed to C functions with argc and argv as well as how to use __attribute__((unused)) or void to compile functions with unused variables or parameters.
+# C - argc, argv
 
-Tasks 📃
-0. It ain't what they call you, it's what you answer to
+This project focuses on understanding and using command line arguments in C programs through the parameters `argc` and `argv`.
 
-0-whatsmyname.c: C program that prints its name, followed by a new line.
-If the program is renamed, the program will print the new name without having to be compiled again.
-The path should not be removed before the name of the program.
-1. Silence is argument carried out by other means
+## Description
 
-1-args.c: C program that prints the number of arguments passed to it, followed by a new line.
-2. The best argument against democracy is a five-minute conversation with the average voter
+In C programming, when executing a program from the command line, you can pass arguments to it. These arguments are captured through two parameters in the `main` function:
+- `argc` (argument count): The number of arguments passed to the program
+- `argv` (argument vector): An array of strings containing the arguments
 
-2-args.c: C program that prints all arguments it receives, including the first one.
-Arguments are printed one per line, ending with a new line.
-3. Neither irony nor sarcasm is argument
+## Learning Objectives
 
-3-mul.c: C program that multiplies two numbers and prints the result, followed by a new line.
-The program assumes the two numbers and result of the multiplication can be stored in an int.
-If the program does not receive two arguments, it prints Error followed by a new line and returns 1.
-4. To infinity and beyond
+- How to use arguments passed to a program
+- Understanding the two prototypes of `main` function and when to use each
+- How to use `__attribute__((unused))` or `(void)` to compile functions with unused variables or parameters
 
-4-add.c: C program that adds two positive numbers and prints the result, followed by a new line.
-The program assumes that the numbers and result of the addition can be stored in an int.
-If no number is passed to the program, it prints 0 followed by a new line.
-If one of the numbers contains symbols that are not digits, the program prints Error followed by a new line and returns 1.
-5. Minimal Number of Coins for Change
+## Tasks
 
-100-change.c: C program that prints the minimum number of coins to make change for an amount of money.
-Usage: ./change cents where cents is the amount of cents needed to give back.
-Change can use an unlimited number of coins of values 25, 10, 5, 2 and 1 cent.
-If the number passed as the argument is negative, the program prints 0 followed by a new line.
-If the number of arguments passed to the program is not exactly one, it prints Error followed by a new line and returns 1.
+1. **0-whatsmyname.c** - Program that prints its own name
+2. **1-args.c** - Program that prints the number of arguments passed to it
+3. **2-args.c** - Program that prints all arguments it receives
+4. **3-mul.c** - Program that multiplies two numbers passed as arguments
+5. **4-add.c** - Program that adds positive numbers passed as arguments
+
+## Requirements
+
+- All files will be compiled on Ubuntu 20.04 LTS using `gcc` with the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- Code must follow the Betty style
+- No global variables allowed
+- Maximum of 5 functions per file
+- Prototypes of all functions should be included in a header file called `main.h`
+
+## Usage Examples
+
+```bash
+$ ./mynameis
+./mynameis
+
+$ ./nargs 
+0
+
+$ ./nargs hello world
+2
+
+$ ./args hello world
+./args
+hello
+world
+
+$ ./mul 2 3
+6
+
+$ ./add 1 2 3 4 5
+15
+```
+
+## Key Concepts
+
+- The first argument (`argv[0]`) is always the program name
+- Arguments are passed as strings and must be converted if numeric operations are needed
+- The `atoi()` function can be used to convert string arguments to integers
+- Error handling is important when dealing with command line arguments
