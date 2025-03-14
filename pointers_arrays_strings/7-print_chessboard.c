@@ -22,5 +22,5 @@ for (hori = 0; hori < 8; hori++)
 		_putchar(a[hori][vert]);
 		}
 	_putchar('\n');
-}
+	}
 }
