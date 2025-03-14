@@ -17,9 +17,9 @@ int length = 0;
 
 	while (src[length] != '\0')
 	{
-	dest[length] = src[length];
-	length++;
-		}
+		dest[length] = src[length];
+		length++;
+	}
 
 dest[length] = '\0';
 

@@ -23,14 +23,15 @@ b = 0;
 	{
 		if (s[a] == accept[b])
 		{
-		c++;
-		break;
+			c++;
+			break;
 		}
 	b++;
 	}
-if (accept[b] == '\0')
-break;
-a++;
+
+		if (accept[b] == '\0')
+			break;
+			a++;
 }
 return (c);
 }

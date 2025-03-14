@@ -23,6 +23,7 @@ int i = 0;
 			i++;
 			continue;
 		}
+
 		if (s[i] == '-' || s[i] == '+')
 		{
 			if (s[i] == '-')

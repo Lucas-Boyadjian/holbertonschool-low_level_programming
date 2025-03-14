@@ -13,16 +13,16 @@ int length = 0;
 int n;
 int i;
 
-while (str[length] != '\0')
+	while (str[length] != '\0')
 	{
-	length++;
+		length++;
 	}
 
 n = (length + 1) / 2;
 
 	for (i = n ; str[i] != '\0' ; i++)
 	{
-	_putchar(str[i]);
+		_putchar(str[i]);
 	}
 _putchar('\n');
 }
