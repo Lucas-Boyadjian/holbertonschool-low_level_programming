@@ -9,6 +9,7 @@
  * Return: A pointer to the function that corresponds to the operator
  *         given as a parameter, or NULL if no match is found.
  */
+
 int (*get_op_func(char *s))(int, int)
 {
 
