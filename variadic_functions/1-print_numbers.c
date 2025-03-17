@@ -3,12 +3,17 @@
 #include "variadic_functions.h"
 
 /**
-* sum_them_all - Sums all its parameters.
-* @n: The number of arguments passed to the function.
-* Return: The sum of all parameters, or 0 if n is 0.
+* print_numbers - Prints numbers, separated by a given string.
+* @separator: The string to be printed between numbers.
+* @n: The number of integers passed to the function.
+* Return: Nothing.
 */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 
+if (separator == NULL)
+printf(", ");
+
+printf("\n");
 }
