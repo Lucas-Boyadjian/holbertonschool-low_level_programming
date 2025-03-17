@@ -24,7 +24,7 @@ op_t ops[] = {
 {NULL, NULL}
 };
 
-	while ((ops[i].op) != NULL)
+	while (ops[i].op != NULL)
 	{
 		if (*s == *(ops[i].op))
 			return (ops[i].f);
