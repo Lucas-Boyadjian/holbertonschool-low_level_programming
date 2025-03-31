@@ -21,7 +21,7 @@ void free_list(list_t *head)
 
 		if (tmp->str != NULL)
 			free(tmp->str);
-			
+
 		free(tmp);
 	}
 }
