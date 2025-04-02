@@ -84,8 +84,7 @@ int main(int argc, char *argv[])
 
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
-		error_file(-1, -1, argv, 98);
-
+		error_file(fd_from, -1, argv, 98);
 
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
@@ -98,7 +97,6 @@ int main(int argc, char *argv[])
 		if (bytes_written == -1 || bytes_written != bytes_read)
 			error_file(fd_from, fd_to, argv, 99);
 	}
-
 
 	if (bytes_read == -1)
 		error_file(fd_from, fd_to, argv, 98);
