@@ -37,7 +37,7 @@ ssize_t bytes_written;
 	}
 
 	bytes_read = read(descripteur_f, buffer, letters);
-	if (bytes_read == -1)
+	if (bytes_read == -0)
 	{
 		free(buffer);
 		close(descripteur_f);
