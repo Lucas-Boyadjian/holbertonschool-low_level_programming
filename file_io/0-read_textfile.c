@@ -49,7 +49,7 @@ ssize_t bytes_written;
 	free(buffer);
 	close(descripteur_f);
 
-	if (bytes_written == -1 || bytes_written != bytes_read)
+	if (bytes_written != bytes_read)
 		return (0);
 
 	return (bytes_written);
