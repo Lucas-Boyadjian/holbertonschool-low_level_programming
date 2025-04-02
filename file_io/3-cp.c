@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
 
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
-		error_file(fd_from, -1, argv, 98);
+		error_file(-1, -1, argv, 98);
 
 
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
