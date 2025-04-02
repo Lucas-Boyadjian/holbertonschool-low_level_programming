@@ -52,5 +52,5 @@ ssize_t bytes_written;
 	if (bytes_written == -1 || bytes_written != bytes_read)
 		return (0);
 
-	return (bytes_read);
+	return (bytes_written);
 }
