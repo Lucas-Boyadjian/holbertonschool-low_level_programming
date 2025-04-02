@@ -31,7 +31,6 @@ ssize_t bytes_written;
 
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
-
 	{
 		close(descripteur_f);
 		return (0);
@@ -53,5 +52,5 @@ ssize_t bytes_written;
 	if (bytes_written == -1 || bytes_written != bytes_read)
 		return (0);
 
-	return (bytes_written);
+	return (bytes_read);
 }
