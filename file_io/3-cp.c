@@ -4,7 +4,9 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+
 #define BUFFER_SIZE 1024
+
 /**
  * error_file - Handles file errors and exits with appropriate code
  * @file_from: File descriptor for source file
@@ -39,6 +41,7 @@ void error_file(int file_from, int file_to, char *argv[], int error_code)
 		exit(100);
 	}
 }
+
 /**
  * main - Copies the content of a file to another file
  * @argc: Number of arguments
@@ -52,8 +55,10 @@ int main(int argc, char *argv[])
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-	exit(97);
+	{	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	umask(0);
 
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
@@ -64,24 +69,25 @@ int main(int argc, char *argv[])
 		error_file(file_from, file_to, argv, 99);
 
 	while ((bytes_read = read(file_from, buffer, BUFFER_SIZE)) > 0)
-	{
-		bytes_written = write(file_to, buffer, bytes_read);
-		if (bytes_written == -1 || bytes_written != bytes_read)
-			error_file(file_from, file_to, argv, 99);
+	{	bytes_written = 0;
+		while (bytes_written < bytes_read)
+		{	ssize_t write_result = write(file_to, buffer + bytes_written,
+				bytes_read - bytes_written);
+			if (write_result == -1)
+				error_file(file_from, file_to, argv, 99);
+			bytes_written += write_result;
+		}
 	}
 	if (bytes_read == -1)
 		error_file(file_from, file_to, argv, 98);
 
 	close_status = close(file_from);
 	if (close_status == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
-	exit(100);
+		error_file(file_from, -1, argv, 100);
 
 	close_status = close(file_to);
 	if (close_status == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
-		exit(100);
-	}
+		error_file(-1, file_to, argv, 100);
+
 	return (0);
 }
