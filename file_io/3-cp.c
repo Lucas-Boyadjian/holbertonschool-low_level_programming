@@ -27,7 +27,7 @@ void error_file(int file_from, int file_to, char *argv[], int error_code)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		if (file_from != -1)
-			close(fd_from);
+			close(file_from);  /* Corrigé file_from au lieu de fd_from */
 		if (file_to != -1)
 			close(file_to);
 		exit(99);
@@ -35,9 +35,9 @@ void error_file(int file_from, int file_to, char *argv[], int error_code)
 	else if (error_code == 100)
 	{
 		if (file_to == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		else
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
 	}
 }
