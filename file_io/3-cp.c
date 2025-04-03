@@ -34,7 +34,10 @@ void error_file(int fd_from, int fd_to, char *argv[], int error_code)
 	}
 	else if (error_code == 100)
 	{
+		if (fd_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+		else
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
 		exit(100);
 	}
 }
