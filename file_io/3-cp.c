@@ -5,8 +5,6 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-#define BUFFER_SIZE 1024
-
 /**
  * error_file - Handles file errors and exits with appropriate code
  * @file_from: File descriptor for source file
@@ -52,7 +50,7 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to, close_status;
 	ssize_t bytes_read, bytes_written;
-	char buffer[BUFFER_SIZE];
+	char buffer[1024];
 
 	if (argc != 3)
 	{	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -68,7 +66,7 @@ int main(int argc, char *argv[])
 	if (file_to == -1)
 		error_file(file_from, file_to, argv, 99);
 
-	while ((bytes_read = read(file_from, buffer, BUFFER_SIZE)) > 0)
+	while ((bytes_read = read(file_from, buffer, 1024)) > 0)
 	{	bytes_written = 0;
 		while (bytes_written < bytes_read)
 		{	ssize_t write_result = write(file_to, buffer + bytes_written,
