@@ -19,6 +19,7 @@ void print_square(int size)
 	}
 
 	a = 0;
+
 	while (a < size)
 	{
 		for (b = 0; b < size; b++)
