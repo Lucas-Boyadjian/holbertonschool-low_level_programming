@@ -63,3 +63,7 @@ char *create_array(unsigned int size, char c)
 ## Note
 
 Understanding dynamic memory allocation is essential for efficient C programming, especially when dealing with data structures of variable size or when the amount of memory needed is not known at compile time.
+
+## Author
+
+Lucas - Holberton School Student

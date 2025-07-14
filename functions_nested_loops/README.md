@@ -47,3 +47,7 @@ For this project, we are using a custom `_putchar` function to print characters.
 ## Note
 
 Understanding functions and nested loops is essential for building more complex programs, as they allow for code reusability and handling repetitive tasks efficiently.
+
+## Author
+
+Lucas - Holberton School Student

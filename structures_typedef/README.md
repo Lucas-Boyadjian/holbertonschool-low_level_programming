@@ -65,3 +65,7 @@ When working with structures that contain pointers (like strings), remember:
 ## Note
 
 Understanding structures and typedef is crucial for organizing related data in C programming. These concepts allow for creating more complex and meaningful data types that better represent real-world objects and relationships.
+
+## Author
+
+Lucas - Holberton School Student

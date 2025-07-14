@@ -60,3 +60,7 @@ $ ./add 1 2 3 4 5
 - Arguments are passed as strings and must be converted if numeric operations are needed
 - The `atoi()` function can be used to convert string arguments to integers
 - Error handling is important when dealing with command line arguments
+
+## Author
+
+Lucas - Holberton School Student

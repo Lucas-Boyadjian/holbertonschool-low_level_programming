@@ -77,3 +77,7 @@ int main(void)
 ## Note
 
 Understanding variables, control flow with conditionals, and loops are fundamental concepts in programming. Mastering these basics is essential before moving on to more complex topics like functions, pointers, and data structures.
+
+## Author
+
+Lucas - Holberton School Student

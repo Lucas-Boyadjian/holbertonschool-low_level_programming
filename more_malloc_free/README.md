@@ -57,3 +57,7 @@ void *malloc_checked(unsigned int b)
 ## Note
 
 Proper memory management is crucial in C programming. Understanding how to effectively allocate and manage memory dynamically is essential for building robust and efficient programs, especially when handling data of variable sizes or when memory requirements are not known at compile time.
+
+## Author
+
+Lucas - Holberton School Student

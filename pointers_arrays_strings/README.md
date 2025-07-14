@@ -59,3 +59,7 @@ This project explores fundamental concepts in C programming related to memory ma
 ## Note
 
 Mastering pointers, arrays, and strings is fundamental to C programming. These concepts allow for efficient memory use and form the foundation for more advanced data structures and algorithms.
+
+## Author
+
+Lucas - Holberton School Student

@@ -1,61 +1,76 @@
-# Holberton School Low Level Programming
+# holbertonschool-low_level_programming
 
-This repository contains various projects completed as part of the Holberton School curriculum, focusing on low-level programming concepts using the C language.
+This repository contains all the low-level programming projects completed as part of the Holberton School curriculum. Each directory focuses on a specific concept in C programming, from the basics to more advanced topics.
 
-## Project List
+## Table of Contents
 
-### C Basics
-- **hello_world**: Introduction to C programming, compilation process with gcc, and basic syntax
-- **variables_if_else_while**: Control flow with conditionals and loops
-- **functions_nested_loops**: Function declarations, definitions, and nested loop structures
-- **more_functions_nested_loops**: Advanced function implementations and nested loop applications
+- [hello_world](hello_world/) - Introduction to C, compilation, and basic output.
+- [variables_if_else_while](variables_if_else_while/) - Variables, conditionals, and loops in C.
+- [functions_nested_loops](functions_nested_loops/) - Functions, nested loops, and custom header files.
+- [more_functions_nested_loops](more_functions_nested_loops/) - More practice with functions and nested loops.
+- [pointers_arrays_strings](pointers_arrays_strings/) - Pointers, arrays, and string manipulation.
+- [malloc_free](malloc_free/) - Dynamic memory allocation with malloc and free.
+- [more_malloc_free](more_malloc_free/) - Advanced dynamic memory allocation.
+- [recursion](recursion/) - Recursive functions and concepts.
+- [argc_argv](argc_argv/) - Command-line arguments in C.
+- [file_io](file_io/) - File input/output operations.
+- [singly_linked_lists](singly_linked_lists/) - Implementation and manipulation of singly linked lists.
+- [doubly_linked_lists](doubly_linked_lists/) - Implementation and manipulation of doubly linked lists.
+- [structures_typedef](structures_typedef/) - Structures and typedef usage in C.
+- [function_pointers](function_pointers/) - Using and implementing function pointers.
+- [variadic_functions](variadic_functions/) - Variadic functions and macros.
 
-### Memory Management
-- **pointers_arrays_strings**: Fundamentals of memory addresses, pointer arithmetic, arrays, and string manipulation
-- **more_pointers_arrays_strings**: Additional practice with pointer concepts and string operations
-- **even_more_pointers_arrays_strings**: Complex applications and 2D arrays
+## About
 
-### Memory Allocation
-- **malloc_free**: Dynamic memory allocation and deallocation
-- **more_malloc_free**: Advanced memory management techniques
-- **realloc_concept**: Memory reallocation and resizing
+This repository is a journey through the foundations of C programming, covering:
+- Compilation process and GCC usage
+- Variables, data types, and operators
+- Control flow: if, else, while, for, switch
+- Functions: declaration, definition, scope, and recursion
+- Pointers, arrays, and strings
+- Memory management: malloc, free, calloc, realloc
+- File I/O with system calls
+- Data structures: singly and doubly linked lists, structs, typedef
+- Function pointers and variadic functions
+- Code style: Betty linter and best practices
 
-### Programming Concepts
-- **recursion**: Implementation and application of recursive algorithms
-- **static_libraries**: Creating and using static libraries in C
-- **argc_argv**: Handling command-line arguments
-- **preprocessor**: Using the C preprocessor, macros, and header files
-- **structures_typedef**: Creating and working with custom data structures
-- **function_pointers**: Working with pointers to functions
-- **variadic_functions**: Functions with variable number of arguments
+Each directory contains:
+- Source code files for each task (named according to Holberton conventions)
+- A README.md describing the topic and listing the tasks
+- Header files with function prototypes
 
-### Development Tools
-- **makefiles**: Creating and using Makefiles for project compilation
-- **debugging**: Finding and fixing bugs in C programs
+## Compilation
 
-### Data Structures
-- **singly_linked_lists**: Implementation and manipulation of singly linked lists
-- **doubly_linked_lists**: Implementation and manipulation of doubly linked lists
-- **hash_tables**: Creating and using hash tables in C
+All C files are compiled on Ubuntu 20.04 LTS with:
+```bash
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 file.c -o output
+```
 
-### Bitwise Operations
-- **bit_manipulation**: Performing operations at the bit level
-- **file_io**: File input/output operations in C
+## Example
 
-## Technical Requirements
+```c
+#include <stdio.h>
 
-- All programs written in C
-- Compiled on Ubuntu LTS with gcc using the flags: -Wall -Werror -Wextra -pedantic
-- Code follows the Betty style guide
-- No global variables used unless specified
-- Limited use of standard library functions, focus on building from scratch
-- Function prototypes included in header files
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    printf("Hello, Holberton!\n");
+    return (0);
+}
+```
 
-## Skills Developed
+## Requirements
 
-- Algorithmic thinking and problem-solving
-- Memory management and manipulation
-- Efficient data structure implementation
-- Understanding of compiler and build processes
-- Debugging techniques
-- Code organization and documentation
+- All code is written in C and tested on Ubuntu 20.04 LTS.
+- Code follows Holberton School guidelines and Betty style.
+- No global variables allowed.
+- Maximum of 5 functions per file (unless specified).
+- Only allowed standard library functions per project instructions.
+
+## Author
+
+Lucas - Holberton School Student

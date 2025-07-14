@@ -46,3 +46,7 @@ For this project, we are using a custom `_putchar` function to print characters.
 ## Note
 
 This project reinforces the understanding of functions and nested loops in C programming while introducing more complex patterns and operations. Mastering these concepts is essential for building efficient and well-structured C programs.
+
+## Author
+
+Lucas - Holberton School Student

@@ -50,7 +50,7 @@ $ ./3-name
 
 # For C programs
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-puts.c && ./a.out
-"Programming is like building a multilingual puzzle
+Programming is like building a multilingual puzzle
 
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-printf.c && ./a.out
 with proper grammar, but the outcome is a piece of art,
@@ -66,3 +66,7 @@ Size of a float: 4 byte(s)
 ## Note
 
 This project represents the first step in learning C programming. Understanding these basic concepts will form the foundation for more complex topics in future projects.
+
+## Author
+
+Lucas - Holberton School Student
